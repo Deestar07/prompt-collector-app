@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Collector</title>
+  <style>
+   body { font-family: Arial; max-width: 600px; margin: auto; padding: 20px; }
+    input, textarea, select { width: 100%; margin-bottom: 10px; padding: 8px; }
+    button { padding: 10px 20px; }
+
+  .container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: 500;
+    margin-top: 10px;
+    display: block;
+  }
+
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+  }
+</style>
+
+</head>
+<body>
+  <h2>Save a New Prompt</h2>
+  <form action="save.php" method="POST">
+    <label>Prompt:</label>
+    <textarea name="prompt" required></textarea>
+
+    <label>Category:</label>
+    <select name="category" required>
+      <option value="Writing">Writing</option>
+      <option value="Coding">Coding</option>
+      <option value="Marketing">Marketing</option>
+      <option value="General">General</option>
+    </select>
+
+    <label>Note (optional):</label>
+    <textarea name="note"></textarea>
+
+    <button type="submit">Save Prompt</button>
+  </form>
+
+  <a href="view.php">View Saved Prompts</a>
+</body>
+</html>
